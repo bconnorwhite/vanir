@@ -23,7 +23,7 @@
 				<h3>Summary</h3>
 				<?php echo $post->post_content; ?>
 				<div class="button-div">
-					<a class="button" href="<?php echo get_the_excerpt(); ?>">View Project</a>
+					<a class="button" href="<?php echo get_the_excerpt(); ?>" target="_blank">View Project</a>
 				</div>
 		</div>
 	</div>
