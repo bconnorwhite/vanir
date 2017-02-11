@@ -11,12 +11,23 @@ if (function_exists('add_theme_support')) {
 	//set_post_thumbnail_size(460, 460, true);
 }
 
+/* List Categories------------*/
+function add_post_cats($postcats){
+	if ($postcats) {
+		for($c=0; $c<count($postcats); $c++) {
+			echo $postcats[$c]->name;
+			if($c!=(count($postcats)-1))
+				echo ', ';
+		}
+	}
+}
+
 /* List Tags------------*/
 function add_post_tags($posttags){
 	if ($posttags) {
-		for($p=0; $p<count($posttags); $p++) {
-			echo $posttags[$p]->name;
-			if($p!=(count($posttags)-1))
+		for($t=0; $t<count($posttags); $t++) {
+			echo $posttags[$t]->name;
+			if($t!=(count($posttags)-1))
 				echo ', ';
 		}
 	}
