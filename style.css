@@ -79,6 +79,7 @@ html {
       padding: 2.5rem 0;
       width: 100%;
       top: 0px;
+      z-index: 10;
       transition: 0.25s ease; }
       @media (max-width: 540px) {
         html body header {

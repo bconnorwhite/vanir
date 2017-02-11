@@ -17,7 +17,7 @@
         <?php wp_head(); ?>
     </head>
     <body>
-      <header id="header">
+      <header id="header" <?php if(!is_front_page()){?>class="barMenu"<?php } ?>>
         <div class="wrap">
           <a id="top-bar-name" href="/#top"><h1>Connor <strong>White</strong></h1></a>
           <?php wp_nav_menu(array('theme_location' => 'top-nav')); ?>

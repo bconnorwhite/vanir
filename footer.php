@@ -9,8 +9,10 @@
 						</a>
 					</div>
 				</div>
-				<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/scripts/menu.js"></script>
-				<?php wp_footer(); ?>
+				<?php if(is_front_page()){ ?>
+					<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/scripts/menu.js"></script>
+				<?php }
+				wp_footer(); ?>
 			</footer>
 	</body>
 </html>
