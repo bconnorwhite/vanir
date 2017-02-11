@@ -11,7 +11,7 @@
     		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
     		<link rel="stylesheet" href="/fonts/font-awesome/css/font-awesome.min.css">
     		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,700|Merriweather:300,400,700' rel='stylesheet' type='text/css'>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0">
         <meta name="Revisit-After" content="7 Days">
         <meta name="robots" content="index,follow">
         <?php wp_head(); ?>
