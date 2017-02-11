@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div id="main">
+<div id="main" class="page">
 	<ul>
 		<?php
 	    $args = array( 'post_type' => 'post' );

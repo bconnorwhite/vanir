@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div id='main'>
+<div id='main' class="front">
 	<div id='top'>
 		<div class='wrap'>
 			<div id='title'>
@@ -17,9 +17,11 @@
 	<div id='portfolio'>
 		<?php
 			$cat_list = get_posts( array('category' => 218) );
-			foreach ($cat_list as $post) : setup_postdata($post);
-				include 'case-study.php';
-			endforeach;
+			foreach ($cat_list as $post) : setup_postdata($post); ?>
+				<a href="<?php the_permalink(); ?>">
+					<?php include 'case-study.php'; ?>
+				</a>
+			<?php endforeach;
 		?>
 	</div>
 	<?php include 'contact.php'; ?>
