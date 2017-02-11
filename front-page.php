@@ -16,8 +16,8 @@
 	</div>
 	<div id='portfolio'>
 		<?php
-			$cat_list = get_posts( array('category' => 218) );
-			foreach ($cat_list as $post) : setup_postdata($post); ?>
+			$sticky_posts = get_option( 'sticky_posts' );
+			foreach ($sticky_posts as $post) : setup_postdata($post); ?>
 				<a href="<?php the_permalink(); ?>">
 					<?php include 'case-study.php'; ?>
 				</a>
