@@ -107,7 +107,8 @@ html {
         display: none;
         padding: 14px 0;
         float: right;
-        fill: #e5e5e5; }
+        fill: #e5e5e5;
+        cursor: pointer; }
     html body .openMenu #hamburger {
       display: block !important; }
     html body #main {
@@ -477,6 +478,8 @@ html {
 
 .freezeY {
   overflow: hidden; }
+  .freezeY body {
+    overflow: hidden; }
   .freezeY #main {
     -webkit-filter: blur(5px);
     -moz-filter: blur(5px);
