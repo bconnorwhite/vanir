@@ -1,7 +1,7 @@
 			<footer>
 				<div class='wrap'>
 					<div class='social'>
-						<a href="www.linkedin.com/in/bconnorwhite" alt="LinkedIn">
+						<a href="http://www.linkedin.com/in/bconnorwhite" alt="LinkedIn">
 							<i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
 						</a>
 						<a href="mailto:connor@connorwhite.org" alt='Email'>
