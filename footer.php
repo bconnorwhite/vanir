@@ -13,7 +13,7 @@
 				<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400|Merriweather:300,400,700' rel='stylesheet' type='text/css'>
 				<script async src="https://use.fontawesome.com/1b52717aea.js"></script>
 				<script async type="text/javascript" src="<?php bloginfo('template_url'); ?>/scripts/menu.js"></script>
-				wp_footer(); ?>
+				<?php wp_footer(); ?>
 			</footer>
 	</body>
 </html>
