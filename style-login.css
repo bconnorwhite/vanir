@@ -53,7 +53,8 @@
   transition: 0.25s ease;
   border-radius: 0px;
   border: 1px solid #e1e1e1 !important; }
-  .wp-core-ui .button-primary:hover {
+  .wp-core-ui .button-primary:hover, .wp-core-ui .button-primary:focus, .wp-core-ui .button-primary:active {
+    background: #fff !important;
     color: #282828;
     border: 1px solid #686868 !important; }
 
