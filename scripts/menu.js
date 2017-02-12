@@ -11,23 +11,10 @@ var menuFunc = {
 	CLOSE: 3,
 };
 
-var titleFunc = {
-	HIDE: 0,
-	SHOW: 1,
-};
-
 window.onscroll = function() { checkScroll(solidBarY); };
 
-function title(func){
-	var title = document.getElementById("title");
-	switch(func){
-		case titleFunc.HIDE:
-			title.classList.remove("show");
-			break;
-		case titleFunc.SHOW:
-			title.classList.remove("hide");
-			break;
-	}
+function hasClass(element, cls) {
+    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
 }
 
 function menuClose(){
@@ -64,11 +51,9 @@ function menu(func){
 
 function checkScroll(y) {//Display top bar if page has been scrolled far enough
 	var titleY = document.getElementById("title").getBoundingClientRect().top;
-	if (titleY < y){//Title has not passed y
-		title(titleFunc.HIDE);
+	if (titleY < y ){//Title has passed y and HB menu should open
 		menu(menuFunc.BAR);
-	} else {//Title has passed y
-		title(titleFunc.SHOW);
+	} else if(!hasClass(document.getElementById("header"), "openMenu")){//Title has passed y
 		menu(menuFunc.NORM);
 	}
 }
