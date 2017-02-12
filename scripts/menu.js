@@ -62,12 +62,16 @@ function menu(func){
 	}
 }
 
+function hasClass(element, cls) {
+    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+}
+
 function checkScroll(y) {//Display top bar if page has been scrolled far enough
 	var titleY = document.getElementById("title").getBoundingClientRect().top;
-	if (titleY < y){//Title has not passed y
+	if (titleY < y){//Title has passed y and should switch to bar menu
 		title(titleFunc.HIDE);
 		menu(menuFunc.BAR);
-	} else {//Title has passed y
+	} else if(!hasClass(document.getElementById("header"), "openMenu")) {//Title has passed y
 		title(titleFunc.SHOW);
 		menu(menuFunc.NORM);
 	}
