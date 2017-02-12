@@ -81,7 +81,7 @@ function setLinks(){//Apply addSmoothScrolling to each element of the top nav me
 	var topBarName = document.getElementById('top-bar-name');
 	addSmoothScrolling(topBarName);//Add smooth scrolling to top bar name
 	var menuItems = document.getElementById('menu-top-nav').children;
-	for(var i=0; i<=menuItems.length; i++){//For each menu item, add smooth scrolling
+	for(var i=0; i<menuItems.length; i++){//For each menu item, add smooth scrolling
 		var link = menuItems[i].firstElementChild;
 		addSmoothScrolling(link);
 	}
