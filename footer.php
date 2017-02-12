@@ -9,6 +9,9 @@
 						</a>
 					</div>
 				</div>
+				<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+				<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400|Merriweather:300,400,700' rel='stylesheet' type='text/css'>
+				<link rel="stylesheet" href="/fonts/font-awesome/css/font-awesome.min.css">
 				<?php if(is_front_page()){ ?>
 					<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/scripts/menu.js"></script>
 				<?php }
