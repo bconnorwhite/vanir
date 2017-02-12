@@ -11,23 +11,10 @@ var menuFunc = {
 	CLOSE: 3,
 };
 
-var titleFunc = {
-	HIDE: 0,
-	SHOW: 1,
-};
-
 window.onscroll = function() { checkScroll(solidBarY); };
 
-function title(func){
-	var title = document.getElementById("title");
-	switch(func){
-		case titleFunc.HIDE:
-			title.classList.remove("show");
-			break;
-		case titleFunc.SHOW:
-			title.classList.remove("hide");
-			break;
-	}
+function hasClass(element, cls) {
+    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
 }
 
 function menuClose(){
