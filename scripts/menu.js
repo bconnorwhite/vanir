@@ -16,7 +16,12 @@ var titleFunc = {
   SHOW: 1,
 };
 
-window.onscroll = function() { checkScroll(solidBarY); };
+//Only call checkScroll if on homepage
+if(location.pathname == "/"){
+	window.onscroll = function() {
+		checkScroll(solidBarY);
+	};
+}
 
 function title(func){
   var title = document.getElementById("title");
