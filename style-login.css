@@ -4,6 +4,8 @@
 .login {
   background-color: #fff;
   text-align: center; }
+  .login .message, .login #login_error {
+    display: none; }
   .login h1 {
     content: "Connor White"; }
     .login h1 a {
@@ -21,11 +23,13 @@
         color: #686868; }
   .login form {
     border-top: 1px solid #686868;
-    padding-top: 35px; }
+    padding-top: 35px;
+    padding-bottom: 24px; }
   .login #loginform {
     padding-left: 0;
     padding-right: 0;
-    box-shadow: none; }
+    box-shadow: none;
+    text-align: left; }
     .login #loginform p label {
       color: #686868; }
     .login #loginform .input, .login #loginform input {
@@ -36,6 +40,7 @@
     box-shadow: none !important; }
   .login #nav a,
   .login #backtoblog a {
+    display: none;
     color: #282828; }
     .login #nav a:hover,
     .login #backtoblog a:hover {
@@ -44,12 +49,12 @@
 .wp-core-ui .button-primary {
   background: #fff !important;
   text-shadow: none;
-  color: #282828;
+  color: #686868;
   transition: 0.25s ease;
   border-radius: 0px;
-  border: 1px solid #686868 !important; }
+  border: 1px solid #e1e1e1 !important; }
   .wp-core-ui .button-primary:hover {
-    color: #686868;
-    border: 1px solid #e1e1e1 !important; }
+    color: #282828;
+    border: 1px solid #686868 !important; }
 
 /*# sourceMappingURL=style-login.css.map */
