@@ -1,5 +1,4 @@
 function sendEmail(url){
-  alert("BOB");
   var xhttp = new XMLHttpRequest();
   var params = "name=" + document.getElementById('form-name').value + "&email=" + document.getElementById('form-email').value + "&message=" + document.getElementById('form-message').value;
   xhttp.onreadystatechange = function() {
@@ -18,7 +17,6 @@ function sendEmail(url){
       }, 1000);
     }
   };
-  alert(url);
   xhttp.open("POST", url, true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send(params);
