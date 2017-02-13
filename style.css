@@ -349,16 +349,16 @@ html {
       html body .content .button-div {
         text-align: center;
         padding: 75px 0 30px; }
-        @media (max-width: 540px) {
+        @media (max-width: 720px) {
           html body .content .button-div {
             padding: 50px 0 20px; } }
     html body #contact {
       text-align: center;
-      padding: 5rem 5rem 8rem 5rem;
+      padding: 5rem 5rem 7rem 5rem;
       background-color: #e5e5e5; }
-      @media (max-width: 540px) {
+      @media (max-width: 720px) {
         html body #contact {
-          padding: 4rem 3rem 7rem 3rem; } }
+          padding: 4rem 3rem 5rem 3rem; } }
       html body #contact h2 {
         font-family: "Merriweather", serif;
         font-size: 2.5rem;
@@ -368,26 +368,45 @@ html {
         font-size: 1.5rem;
         margin-bottom: 3.5rem;
         line-height: 2.25rem; }
+        @media (max-width: 720px) {
+          html body #contact p {
+            margin-bottom: 2rem; } }
       html body #contact #thanks {
         display: none;
         margin: 0;
         font-style: italic; }
+        @media (max-width: 720px) {
+          html body #contact #thanks {
+            font-size: 1.25rem; } }
       html body #contact form {
         text-align: left;
-        width: 70%;
+        width: 44rem;
+        max-width: 100%;
         margin: 0 auto;
         color: #686868;
         transition: 1s ease; }
         html body #contact form .info {
           display: flex; }
+          @media (max-width: 720px) {
+            html body #contact form .info {
+              display: inline; } }
           html body #contact form .info .field {
             display: flex;
             border-bottom: 1px solid #979797;
             padding-bottom: 2px;
             width: 47.5%;
             overflow-x: hidden; }
+            @media (max-width: 720px) {
+              html body #contact form .info .field {
+                width: 100%; }
+                html body #contact form .info .field p {
+                  font-size: 1.25rem; } }
             html body #contact form .info .field:first-of-type {
               margin-right: 5%; }
+              @media (max-width: 720px) {
+                html body #contact form .info .field:first-of-type {
+                  margin-right: 0;
+                  margin-bottom: 8px; } }
             html body #contact form .info .field p {
               margin-bottom: 2px; }
             html body #contact form .info .field input {
@@ -402,6 +421,9 @@ html {
               font-family: "Open Sans", sans-serif;
               height: 2.125rem;
               padding-left: 10px; }
+              @media (max-width: 720px) {
+                html body #contact form .info .field input {
+                  font-size: 1.25rem; } }
         html body #contact form textarea {
           width: 100%;
           background: none;
@@ -412,8 +434,11 @@ html {
           font-family: "Open Sans", sans-serif;
           resize: vertical;
           overflow: auto;
-          margin-top: 7px;
+          margin-top: 8px;
           outline: none; }
+          @media (max-width: 720px) {
+            html body #contact form textarea {
+              font-size: 1.25rem; } }
           html body #contact form textarea:-moz-placeholder, html body #contact form textarea::-moz-placeholder, html body #contact form textarea::placeholder {
             color: #686868;
             opacity: 1;
