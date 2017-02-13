@@ -5,7 +5,7 @@
   	$email = validate($_POST["email"]);
   	$message = validate($_POST["message"]);
   	mail("connor.bcw@gmail.com", "New Message from " . $name . " at " . $email, $message);
-    mail("connor.bcw@gmail.com", "Test", var_dump($_POST));
+    return false;
   }
   function validate($data){
   	$data = trim($data);
