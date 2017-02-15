@@ -1,23 +1,60 @@
+/* sendEmail(url)
+ * Input: URL of mail.php
+ * Result: -Sends POST request containing paramters for name, email, and message
+           -Hides contact form
+           -Sets inner HTML of #thanks to a custom thank you message, using sender's first name, if available
+ * Return: n/a
+ */
 function sendEmail(url){
   var xhttp = new XMLHttpRequest();
-  var params = "name=" + document.getElementById('form-name').value + "&email=" + document.getElementById('form-email').value + "&message=" + document.getElementById('form-message').value;
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200){
-      document.getElementById('contact-form').style.opacity = 0;
-      var name = document.getElementById('form-name').value;
-      if(/^[A-Za-z\s]+$/.test(name)){
-        name = name.split(" ")[0];
-        document.getElementById('thanks').innerHTML = "Thanks " + name + "! Your message has been sent.";
-      }
-      setTimeout(function(){
-        document.getElementById('contact-form').style.visibility = "hidden";
-        document.getElementById('form-message').style.height = "0";
-        document.getElementById('contact-form').style.height = "0";
-        document.getElementById('thanks').style.display = "block";
-      }, 1000);
+  xhttp.onreadystatechange = function() {//On return from mail.php
+    if(this.readyState == 4 && this.status == 200){
+      personalizeThankYouMessage();
+      hideContactForm();
     }
   };
-  xhttp.open("POST", url, true);
+  xhttp.open("POST", url, true);//POST to mail.php (url)
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  var params = "name=" + document.getElementById('form-name').value + "&email=" + document.getElementById('form-email').value + "&message=" + document.getElementById('form-message').value;
   xhttp.send(params);
+}
+
+/* hideContactForm()
+ * Input: n/a
+ * Result: hides #contact-form
+ * Return: n/a
+ */
+function hideContactForm(){
+  document.getElementById('contact-form').style.opacity = 0;//Set opacity to 0. Tranisiton will take 1s to complete
+  setTimeout(function(){//After transition is complete, get rid of form entirely
+    document.getElementById('contact-form').style.visibility = "hidden";
+    document.getElementById('form-message').style.height = "0";
+    document.getElementById('contact-form').style.height = "0";
+    document.getElementById('thanks').style.display = "block";//Show thank you message
+  }, 1000);
+}
+
+/* personalizeThankYouMessage()
+ * Input: n/a
+ * Result: if getFirstName returns a name, changes #thanks to include sender's first name.
+ * Return: n/a
+ */
+function personalizeThankYouMessage(){
+  var name = document.getElementById('form-name').value;
+  firstName = getFirstName(name);
+  if(firstName !== ""){//Add space before name, if not blank
+    document.getElementById('thanks').innerHTML = "Thanks " + firstName + "! Your message has been sent.";
+  }
+}
+
+/* getFirstName(name)
+ * Input: string name
+ * Return: -if name contains letters and white space only, returns first word
+           -else returns blank string
+ */
+function getFirstName(name){
+  if(/^[A-Za-z\s]+$/.test(name)){//If name contains only letters and white space
+    return name.split(" ")[0];//Set name to first word
+  }
+  return "";
 }
