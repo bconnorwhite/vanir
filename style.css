@@ -395,7 +395,8 @@ html {
             border-bottom: 1px solid #979797;
             padding-bottom: 2px;
             width: 47.5%;
-            overflow-x: hidden; }
+            overflow-x: hidden;
+            transition: 0.25s ease; }
             @media (max-width: 960px) {
               html body #contact form .info .field {
                 width: 100%; }
