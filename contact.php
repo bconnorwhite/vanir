@@ -7,11 +7,11 @@
 			<div class="info">
 				<div class="field">
 					<p>Name:</p>
-					<input id="form-name" type="text" name="name" />
+					<input onfocus="this.parentNode.style.opacity=0.8" onblur="this.parentNode.style.opacity=1" id="form-name" type="text" name="name" />
 				</div>
 				<div class="field">
 					<p>Email:</p>
-					<input id="form-email" type="text" name="email" />
+					<input onfocus="this.parentNode.style.opacity=0.8" onblur="this.parentNode.style.opacity=1" id="form-email" type="text" name="email" />
 				</div>
 			</div>
 			<textarea id="form-message" name="message" placeholder="Message:" rows="5"></textarea>
