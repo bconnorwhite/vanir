@@ -105,5 +105,30 @@ function addSmoothScrolling(element){//Add smooth scrolling to an element
 	};
 }
 
-menuClose();
-setLinks();
+function getBgUrl(el) {
+    var bg = "";
+    if (el.currentStyle) { // IE
+        bg = el.currentStyle.backgroundImage;
+    } else if (document.defaultView && document.defaultView.getComputedStyle) { // Firefox
+        bg = document.defaultView.getComputedStyle(el, "").backgroundImage;
+    } else { // try and get inline style
+        bg = el.style.backgroundImage;
+    }
+    return bg.replace(/url\(['"]?(.*?)['"]?\)/i, "$1");
+}
+
+function fadeInTop(){
+	var image = document.createElement('img');
+	var top = document.getElementById('top');
+	image.src = getBgUrl(top);
+	image.onload = function () {
+	   top.style.opacity = 1;
+		 document.getElementById('header').style.opacity = 1;
+	};
+}
+
+(function(){
+	fadeInTop();
+	menuClose();
+	setLinks();
+})();
