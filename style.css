@@ -479,7 +479,7 @@ html {
     html body a {
       color: #2c2c2c;
       text-decoration: none; }
-      html body a:hover {
+      html body a:hover, html body a:focus {
         color: #686868;
         transition: 0.25s ease; }
     html body h2 {
@@ -573,7 +573,7 @@ html {
       .openMenu ul li a {
         color: #686868;
         padding-bottom: 5px; }
-        .openMenu ul li a:hover {
+        .openMenu ul li a:hover, .openMenu ul li a:focus {
           box-shadow: 0px 4px 3px -5px #2c2c2c;
           color: #2c2c2c; }
   .openMenu #hamburger {
