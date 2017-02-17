@@ -119,10 +119,9 @@ function getBgUrl(el) {
 
 function fadeInTop(){
 	var image = document.createElement('img');
-	var top = document.getElementById('top');
-	image.src = getBgUrl(top);
+	image.src = getBgUrl(document.getElementById('top'));
 	image.onload = function () {
-	   top.style.opacity = 1;
+	   document.getElementById('main').style.opacity = 1;
 		 document.getElementById('header').style.opacity = 1;
 	};
 }

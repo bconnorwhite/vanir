@@ -114,7 +114,9 @@ html {
     html body .openMenu #hamburger {
       display: block !important; }
     html body #main {
-      margin-top: 48px; }
+      margin-top: 48px;
+      opacity: 0;
+      transition: opacity 2s ease; }
     html body .front {
       margin-top: 0 !important; }
     html body .four-o-four {
@@ -134,8 +136,6 @@ html {
           html body .four-o-four .button-div {
             margin: 90px 0; } }
     html body #top {
-      opacity: 0;
-      transition: opacity 2s ease;
       background: url("/wp-content/themes/Vanir/img/header_full.jpg");
       padding-top: 56.25%;
       background-size: contain !important;
