@@ -13,7 +13,7 @@
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0">
         <?php wp_head(); ?>
     </head>
-    <body>
+    <body <?php if(is_front_page()){ ?>class="home"<?php } ?>>
       <header id="header" <?php if(!is_front_page()){?>class="barMenu"<?php } ?>>
         <div class="wrap">
           <a id="top-bar-name" href="/#top"><h1>Connor <strong>White</strong></h1></a>

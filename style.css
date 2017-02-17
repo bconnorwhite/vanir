@@ -70,13 +70,17 @@ html {
   @media (max-width: 375px) {
     html {
       font-size: 0.8215rem; } }
+  html .home header {
+    opacity: 0;
+    transition: opacity 2s ease; }
+  html .home #main {
+    opacity: 0;
+    transition: opacity 2s ease; }
   html body {
     margin: 0;
     padding: 0;
     overflow-x: hidden; }
     html body header {
-      opacity: 0;
-      transition: opacity 2s ease;
       position: fixed;
       padding: 2.5rem 0;
       width: 100%;
@@ -114,9 +118,7 @@ html {
     html body .openMenu #hamburger {
       display: block !important; }
     html body #main {
-      margin-top: 48px;
-      opacity: 0;
-      transition: opacity 2s ease; }
+      margin-top: 48px; }
     html body .front {
       margin-top: 0 !important; }
     html body .four-o-four {
@@ -303,6 +305,7 @@ html {
         html body #portfolio .case-study h2 strong {
           font-weight: 300; }
     html body .content {
+      background-color: #fff;
       padding: 60px 15px;
       font-family: "Merriweather", serif;
       font-size: 1.0625rem;
