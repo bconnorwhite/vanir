@@ -124,6 +124,7 @@ html {
     html body .four-o-four {
       text-align: center; }
       html body .four-o-four h2 {
+        color: #fff;
         font-size: 9rem;
         font-weight: 400;
         margin: 120px 0 30px; }
@@ -131,6 +132,7 @@ html {
           html body .four-o-four h2 {
             margin: 110px 0 30px; } }
       html body .four-o-four h3 {
+        color: #fff;
         font-size: 2rem; }
       html body .four-o-four .button-div {
         margin: 110px 0; }
