@@ -12,6 +12,7 @@
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0">
         <meta property="og:image" content="<?php bloginfo('template_url'); ?>/img/connor_white.jpg" />
+        <meta property="og:description" content="As a web developer, I use technology to bring vision to reality. Have a challenge that needs solving?" />
         <?php wp_head(); ?>
     </head>
     <body <?php if(is_front_page()){ ?>class="home"<?php } ?>>
