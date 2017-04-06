@@ -11,6 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0">
+        <meta property="og:image" content="<?php bloginfo('template_url'); ?>/img/connor_white.jpg" />
         <?php wp_head(); ?>
     </head>
     <body <?php if(is_front_page()){ ?>class="home"<?php } ?>>
