@@ -1,3 +1,5 @@
+var form = document.forms['contact'];
+
 /* sendEmail(url)
  * Input: URL of mail.php
  * Result: -Sends POST request containing paramters for name, email, and message
@@ -6,17 +8,21 @@
  * Return: n/a
  */
 function sendEmail(url){
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {//On return from mail.php
-    if(this.readyState == 4 && this.status == 200){
-      personalizeThankYouMessage();
-      hideContactForm();
-    }
-  };
-  xhttp.open("POST", url, true);//POST to mail.php (url)
-  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  var params = "name=" + document.getElementById('form-name').value + "&email=" + document.getElementById('form-email').value + "&message=" + document.getElementById('form-message').value;
-  xhttp.send(params);
+  if(form["email"].value == "" || form["message"].value == ""){
+    return false;
+  } else {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {//On return from mail.php
+      if(this.readyState == 4 && this.status == 200){
+        personalizeThankYouMessage();
+        hideContactForm();
+      }
+    };
+    xhttp.open("POST", url, true);//POST to mail.php (url)
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    var params = "name=" + form["name"].value + "&email=" + form["email"].value + "&message=" + form["message"].value;
+    xhttp.send(params);
+  }
 }
 
 /* hideContactForm()
@@ -25,11 +31,11 @@ function sendEmail(url){
  * Return: n/a
  */
 function hideContactForm(){
-  document.getElementById('contact-form').style.opacity = 0;//Set opacity to 0. Tranisiton will take 1s to complete
+  form.style.opacity = 0;//Set opacity to 0. Tranisiton will take 1s to complete
   setTimeout(function(){//After transition is complete, get rid of form entirely
-    document.getElementById('contact-form').style.visibility = "hidden";
-    document.getElementById('form-message').style.height = "0";
-    document.getElementById('contact-form').style.height = "0";
+    form.style.visibility = "hidden";
+    form["message"].style.height = "0";
+    form.style.height = "0";
     document.getElementById('thanks').style.display = "block";//Show thank you message
   }, 1000);
 }
@@ -40,7 +46,7 @@ function hideContactForm(){
  * Return: n/a
  */
 function personalizeThankYouMessage(){
-  var name = document.getElementById('form-name').value;
+  var name = form["name"].value;
   firstName = getFirstName(name);
   if(firstName !== ""){//Add space before name, if not blank
     document.getElementById('thanks').innerHTML = "Thanks " + firstName + "! Your message has been sent.";

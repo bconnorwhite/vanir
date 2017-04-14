@@ -3,20 +3,20 @@
 		<h2>Let's Work Together!</h2>
 		<p>I am currently accepting projects and would love to discuss yours.</p>
 		<p id="thanks">Thanks! Your message has been recorded.</p>
-		<form id="contact-form" action="" method="POST" onsubmit="return false;">
+		<form name="contact" action="" method="POST" onsubmit="return false;">
 			<div class="info">
 				<div class="field">
 					<p>Name:</p>
-					<input onfocus="this.parentNode.style.opacity=0.8" onblur="this.parentNode.style.opacity=1" id="form-name" type="text" name="name" />
+					<input onfocus="this.parentNode.style.opacity=0.8" onblur="this.parentNode.style.opacity=1" name="name" type="text" name="name" />
 				</div>
 				<div class="field">
 					<p>Email:</p>
-					<input onfocus="this.parentNode.style.opacity=0.8" onblur="this.parentNode.style.opacity=1" id="form-email" type="text" name="email" />
+					<input onfocus="this.parentNode.style.opacity=0.8" onblur="this.parentNode.style.opacity=1" name="email" type="text" name="email" required />
 				</div>
 			</div>
-			<textarea id="form-message" name="message" placeholder="Message:" rows="5"></textarea>
+			<textarea name="message" name="message" placeholder="Message:" rows="5" required></textarea>
 			<div class="send">
-				<input id="form-submit" type="submit" name="submit" value="Send" onclick='sendEmail("<?php echo(bloginfo('template_url')) .'/mail.php'; ?>")' />
+				<input name="submit" type="submit" name="submit" value="Send" onclick='sendEmail("<?php echo(bloginfo('template_url')) .'/mail.php'; ?>")' />
 			</div>
 		</form>
 	</div>

@@ -71,10 +71,10 @@ html {
     html {
       font-size: 0.8215rem; } }
   html .home header {
-    opacity: 0;
+    opacity: 1;
     transition: opacity 1s ease; }
   html .home #main {
-    opacity: 0;
+    opacity: 1;
     transition: opacity 1s ease; }
   html body {
     margin: 0;
