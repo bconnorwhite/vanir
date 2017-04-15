@@ -1,4 +1,7 @@
 <?php
+/* FUWP-------- */
+show_admin_bar( false );
+
 /* Add Menus-------- */
 function register_menus(){
 	register_nav_menus(array('top-nav' => __('Top Nav'),));
