@@ -2,7 +2,7 @@ var form = document.forms['contact'];
 
 /* sendEmail(url)
  * Input: URL of mail.php
- * Result: -Sends POST request containing paramters for name, email, and message
+ * Result: -Sends POST request containing parameters for name, email, and message
            -Hides contact form
            -Sets inner HTML of #thanks to a custom thank you message, using sender's first name, if available
  * Return: n/a
