@@ -136,7 +136,7 @@ html {
           html body .four-o-four .button-div {
             margin: 90px 0; } }
     html body #top {
-      background: url("/wp-content/themes/Vanir/img/header_2.jpg");
+      background: url("/wp-content/themes/Vanir/img/header_full.jpg");
       padding-top: 56.25%;
       background-size: contain !important;
       background-repeat: no-repeat !important;
@@ -146,17 +146,17 @@ html {
       color: #e5e5e5; }
       @media (max-width: 1920px) {
         html body #top {
-          background: url("/wp-content/themes/Vanir/img/header_2.jpg"); } }
+          background: url("/wp-content/themes/Vanir/img/header_1920.jpg"); } }
       @media (max-width: 1600px) {
         html body #top {
-          background: url("/wp-content/themes/Vanir/img/header_2.jpg"); } }
+          background: url("/wp-content/themes/Vanir/img/header_1600.jpg"); } }
       @media (max-width: 1440px) {
         html body #top {
-          background: url("/wp-content/themes/Vanir/img/header_169.jpg");
+          background: url("/wp-content/themes/Vanir/img/header_1440.jpg");
           padding-top: 62.5%; } }
       @media (max-width: 1080px) {
         html body #top {
-          background: url("/wp-content/themes/Vanir/img/header_23.jpg");
+          background: url("/wp-content/themes/Vanir/img/header_1080.jpg");
           padding-top: 66.7%; } }
       @media (max-width: 720px) {
         html body #top {
