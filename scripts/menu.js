@@ -123,6 +123,8 @@ function fadeInTop(){
 		//Hide until window is loaded
 		document.getElementById('main').style.opacity = 0;
 		document.getElementById('header').style.opacity = 0;
+		document.getElementById('main').style.transition = "opacity 1s ease";
+		document.getElementById('header').style.transition = "opacity 1s ease";
 		window.onload = function () {
 			 document.getElementById('main').style.opacity = 1;
 			 document.getElementById('header').style.opacity = 1;
