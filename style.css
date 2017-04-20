@@ -3,5 +3,15 @@ Theme Name: Vanir
 Author: Connor White
 Template: Aesir
 */
+#about {
+  transform: rotate(358deg) skew(-2deg);
+  margin-top: -25px;
+  padding: 0; }
+  #about .wrap {
+    transform: rotate(-358deg) skew(2deg);
+    background-color: #fff;
+    padding: 50px;
+    position: relative;
+    top: -40px; }
 
 /*# sourceMappingURL=style.css.map */
